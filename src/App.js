@@ -50,6 +50,13 @@ function App() {
 ]
     )
 
+    //add task
+    const addTask=({text,day,reminder})=>{
+      const id= Math.floor(Math.random() * 10000)+1
+      const newTask={id,text,day,reminder}
+      setTasks([...tasks,newTask])
+    }
+
     //to delete task: 
 
     const deleteTask=(id)=>{
@@ -59,7 +66,7 @@ function App() {
     <div className="App">
       Hi there!
       <Header />
-      <AddTask/>
+      <AddTask onAdd={addTask}/>
       {tasks.length>0?<Tasks tasks={tasks} onDelete={deleteTask}/>:'No task to display'}
   
     </div>
