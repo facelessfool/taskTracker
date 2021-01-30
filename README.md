@@ -1,2 +1,3 @@
-Task Tracker with React.js
-<img src="img/screen.gif" height="800" width="600" >
+<h2>Task Tracker with React.js</h2>
+
+<img src="img/screen.gif" height="750" width="600" >
