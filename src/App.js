@@ -3,10 +3,13 @@ import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 import {useState} from 'react'
 import AddTask from "./components/AddTask";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
+
+  const [showAdd, setShowAdd]=useState(false)
+
 
   const [tasks,setTasks]=useState([
 
@@ -62,11 +65,15 @@ function App() {
     const deleteTask=(id)=>{
       setTasks(tasks.filter((task)=> task.id !==id))
     }
+    const onAdd=()=>{
+      setShowAdd(!showAdd)
+    }
+    
   return (
-    <div className="App">
-      Hi there!
-      <Header />
-      <AddTask onAdd={addTask}/>
+    <div className="App" style={{backgroundColor:"#304352"}}>
+     
+      <Header onAdd={onAdd} showAdd={showAdd}/>
+      {showAdd && <AddTask  onAdd={addTask}/>}
       {tasks.length>0?<Tasks tasks={tasks} onDelete={deleteTask}/>:'No task to display'}
   
     </div>

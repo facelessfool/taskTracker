@@ -8,7 +8,8 @@ const Tasks = ({tasks, onDelete }) => {
 
         
         <div >
-            {tasks.map((task)=>(<Task key={task.id} task={task} onDelete={onDelete} />))}
+            {tasks.map((task)=>
+            (<Task key={task.id} task={task} onDelete={onDelete} />))}
         </div>
     )
 }

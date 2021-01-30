@@ -1,16 +1,20 @@
 import React from 'react'
+import Card from "react-bootstrap/Card";
 
 const Task = ({task,onDelete}) => {
     return (
         <div >
-        <h3 >{task.text} <i 
+        <Card style={{ width: '28rem', marginLeft:"20%", marginBottom:'1%' }} className="d-flex align-items-left justify-content-center ">
+        <Card.Body>
+       <h3 >{task.text} <i 
         style={{color:'red', cursor:'pointer'}} 
         onClick={()=>onDelete(task.id)}
         className="fas fa-backspace"></i>
         </h3>
        
         <p>{task.day}</p>
-        
+        </Card.Body>
+        </Card>
             
         </div>
     )

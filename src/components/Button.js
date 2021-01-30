@@ -5,10 +5,11 @@ const Button = ({color,name, onClick}) => {
    
 
     return (
-        <button 
+        <button  variant="primary"
+         style={{ alignSelf:'center', width: '28rem', marginLeft:"30%" }} className=" justify-content-center "
         onClick={onClick}
         
-        style={{backgroundColor:color}}>{name}</button>
+        style={{ color:"black", backgroundColor:color}}>{name}</button>
     )
 }
 
