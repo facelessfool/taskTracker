@@ -1,2 +1,2 @@
 Task Tracker with React.js
-![working](img/screen.gif)
+<img src="img/screen.gif" height="800" width="600" >
